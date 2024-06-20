@@ -15,7 +15,8 @@ public class AuctionsController : ControllerBase
 {
     private readonly AuctionDbContext _context;
     private readonly IMapper _mapper;
-    public AuctionsController(AuctionDbContext context, IMapper mapper) {
+    public AuctionsController(AuctionDbContext context, IMapper mapper)
+    {
         _context = context;
         _mapper = mapper;
     }
@@ -54,7 +55,7 @@ public class AuctionsController : ControllerBase
 
         if (!result) return BadRequest("Could not save changes to DB");
 
-        return CreatedAtAction(nameof(GetAuctionById), new {auction.Id}, _mapper.Map<AuctionDto>(auction));
+        return CreatedAtAction(nameof(GetAuctionById), new { auction.Id }, _mapper.Map<AuctionDto>(auction));
     }
 
     [HttpPut("{id}")]
@@ -70,7 +71,7 @@ public class AuctionsController : ControllerBase
 
         // TODO: check seller == username
 
-        auction.Item.Make = updateAuctionDto.Make ?? auction.Item.Make; 
+        auction.Item.Make = updateAuctionDto.Make ?? auction.Item.Make;
         auction.Item.Model = updateAuctionDto.Model ?? auction.Item.Model;
         auction.Item.Year = updateAuctionDto.Year ?? auction.Item.Year;
         auction.Item.Color = updateAuctionDto.Color ?? auction.Item.Color;
@@ -82,7 +83,27 @@ public class AuctionsController : ControllerBase
 
         return BadRequest("Could not save changes to DB");
     }
-  
-  
-} 
- 
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> DeleteAuction(Guid id)
+    {
+        var auction = await _context.Auctions.FindAsync(id);
+
+        if (auction == null)
+        {
+            return NotFound();
+        }
+
+        // TODO: check seller == username
+
+        _context.Auctions.Remove(auction);
+
+        var result = await _context.SaveChangesAsync() > 0;
+
+        if (!result) return BadRequest("Could not save changes to DB");
+
+        return Ok();
+    }
+
+
+}
