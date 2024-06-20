@@ -1,6 +1,6 @@
 using AuctionService.Data;
 using Microsoft.EntityFrameworkCore;
-using Npgsql.EntityFrameworkCore.PostgreSQL; // Add this using directive
+using Npgsql.EntityFrameworkCore.PostgreSQL; 
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +10,8 @@ builder.Services.AddDbContext<AuctionDbContext>(opt =>
 {
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
