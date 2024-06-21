@@ -41,3 +41,4 @@
 /Users/sarthak-p/Desktop/Cruvix/src/SearchService/obj/Debug/net8.0/SearchService.pdb
 /Users/sarthak-p/Desktop/Cruvix/src/SearchService/obj/Debug/net8.0/SearchService.genruntimeconfig.cache
 /Users/sarthak-p/Desktop/Cruvix/src/SearchService/obj/Debug/net8.0/ref/SearchService.dll
+/Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/Data/auctions.json
