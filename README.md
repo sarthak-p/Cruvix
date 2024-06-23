@@ -2,7 +2,7 @@
 
 ### Cruvix is an app that provides a platform for car auctions, allowing users to browse and bid on a variety of vehicles. It offers a seamless experience for buying cars through an online auction format, with user-friendly features for managing bids and tracking auction outcomes.
 
-<br />
+***
 
 You can view a demo of this app [here](https://app.carsties.store). You can register a user and sign in to see it in action or you can use one of the test accounts with the username 'bob' or 'alice' with the password of 'Pass123$' to sign in.
 
