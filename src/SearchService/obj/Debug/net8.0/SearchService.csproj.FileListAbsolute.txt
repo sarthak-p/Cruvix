@@ -42,3 +42,6 @@
 /Users/sarthak-p/Desktop/Cruvix/src/SearchService/obj/Debug/net8.0/SearchService.genruntimeconfig.cache
 /Users/sarthak-p/Desktop/Cruvix/src/SearchService/obj/Debug/net8.0/ref/SearchService.dll
 /Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/Data/auctions.json
+/Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/Microsoft.Extensions.Http.Polly.dll
+/Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/Polly.dll
+/Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/Polly.Extensions.Http.dll
