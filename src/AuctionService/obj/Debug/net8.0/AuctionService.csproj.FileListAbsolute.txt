@@ -100,3 +100,9 @@
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/obj/Debug/net8.0/AuctionService.pdb
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/obj/Debug/net8.0/AuctionService.genruntimeconfig.cache
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/obj/Debug/net8.0/ref/AuctionService.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/MassTransit.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/MassTransit.Abstractions.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/MassTransit.RabbitMqTransport.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/RabbitMQ.Client.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Contracts.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Contracts.pdb
