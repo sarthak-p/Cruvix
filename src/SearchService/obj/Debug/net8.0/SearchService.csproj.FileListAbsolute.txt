@@ -45,3 +45,9 @@
 /Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/Microsoft.Extensions.Http.Polly.dll
 /Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/Polly.dll
 /Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/Polly.Extensions.Http.dll
+/Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/MassTransit.dll
+/Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/MassTransit.Abstractions.dll
+/Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/MassTransit.RabbitMqTransport.dll
+/Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/RabbitMQ.Client.dll
+/Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/Contracts.dll
+/Users/sarthak-p/Desktop/Cruvix/src/SearchService/bin/Debug/net8.0/Contracts.pdb
