@@ -106,3 +106,4 @@
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/RabbitMQ.Client.dll
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Contracts.dll
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Contracts.pdb
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/MassTransit.EntityFrameworkCoreIntegration.dll
