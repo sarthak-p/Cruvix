@@ -20,7 +20,21 @@ public class AuctionCreatedConsumer : IConsumer<AuctionCreated>
 
         var item = _mapper.Map<Item>(context.Message);
 
-        if (item.Model == "Foo") throw new ArgumentException("Invalid model");
+        var result = await DB.Update<Item>()
+            .Match(a => a.ID.ToString() == context.Message.Id.ToString())
+            .ModifyOnly(x => new 
+            {
+                x.Make,
+                x.Model,
+                x.Year, 
+                x.Color,
+                x.Mileage
+            }, item)
+            .ExecuteAsync();
+
+        if (!result.IsAcknowledged) {
+            throw new MessageException(typeof(AuctionUpdated), "Problem updating mongodb");
+        }
 
         await item.SaveAsync(); 
     }
