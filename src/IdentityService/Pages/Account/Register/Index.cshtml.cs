@@ -43,7 +43,7 @@ namespace IdentityService.Pages.Register
             {
                 var user = new ApplicationUser
                 {
-                    UserName = Input.UserName,
+                    UserName = Input.Username,
                     Email = Input.Email,
                     EmailConfirmed = true
                 };
