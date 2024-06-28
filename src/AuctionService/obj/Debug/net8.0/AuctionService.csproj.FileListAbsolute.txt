@@ -107,3 +107,11 @@
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Contracts.dll
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Contracts.pdb
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/MassTransit.EntityFrameworkCoreIntegration.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
