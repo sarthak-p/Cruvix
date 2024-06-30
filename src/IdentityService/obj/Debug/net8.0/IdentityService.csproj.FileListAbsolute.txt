@@ -1,4 +1,5 @@
 /Users/sarthak-p/Desktop/Cruvix/src/IdentityService/bin/Debug/net8.0/appsettings.json
+/Users/sarthak-p/Desktop/Cruvix/src/IdentityService/bin/Debug/net8.0/keys/is-signing-key-543C65BFDEAA4E65A24776A13DD97192.json
 /Users/sarthak-p/Desktop/Cruvix/src/IdentityService/bin/Debug/net8.0/IdentityService.staticwebassets.runtime.json
 /Users/sarthak-p/Desktop/Cruvix/src/IdentityService/bin/Debug/net8.0/IdentityService
 /Users/sarthak-p/Desktop/Cruvix/src/IdentityService/bin/Debug/net8.0/IdentityService.deps.json
@@ -133,4 +134,3 @@
 /Users/sarthak-p/Desktop/Cruvix/src/IdentityService/obj/Debug/net8.0/IdentityService.pdb
 /Users/sarthak-p/Desktop/Cruvix/src/IdentityService/obj/Debug/net8.0/IdentityService.genruntimeconfig.cache
 /Users/sarthak-p/Desktop/Cruvix/src/IdentityService/obj/Debug/net8.0/ref/IdentityService.dll
-/Users/sarthak-p/Desktop/Cruvix/src/IdentityService/bin/Debug/net8.0/keys/is-signing-key-543C65BFDEAA4E65A24776A13DD97192.json
