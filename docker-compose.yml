@@ -72,6 +72,17 @@ services:
     depends_on:
       - postgres
 
+  gateway-svc:
+    image: sarthakp3/gateway-svc:latest
+    build:
+      context: .
+      dockerfile: src/GatewayService/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - 6001:80
+
 volumes:
   pgdata:
   mongodata:
