@@ -9,12 +9,12 @@ public class DbInitializer
     {
         using var scope = app.Services.CreateScope();
 
-        SeedData(scope.ServiceProvider.GetRequiredService<AuctionDbContext>());
+        SeedData(scope.ServiceProvider.GetService<AuctionDbContext>());
     }
 
     private static void SeedData(AuctionDbContext context)
     {
-        context.Database.Migrate(); // Ensure database is created and up-to-date
+        context.Database.Migrate();
 
         if (context.Auctions.Any())
         {
@@ -205,6 +205,7 @@ public class DbInitializer
         };
 
         context.AddRange(auctions);
+
         context.SaveChanges();
     }
 }

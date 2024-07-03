@@ -15,10 +15,9 @@ public class AuctionDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        
+
         modelBuilder.AddInboxStateEntity();
-        modelBuilder.AddOutboxMessageEntity(); 
+        modelBuilder.AddOutboxMessageEntity();
         modelBuilder.AddOutboxStateEntity();
     }
-
 }

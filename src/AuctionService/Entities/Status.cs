@@ -2,7 +2,7 @@
 
 public enum Status
 {
-    Live, 
-    Finished, 
+    Live,
+    Finished,
     ReserveNotMet
 }
