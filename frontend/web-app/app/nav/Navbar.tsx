@@ -1,5 +1,6 @@
 import React from 'react'
 import { IoCarSportOutline } from "react-icons/io5";
+import Search from './Search';
 
 export default function Navbar() {
   return (
@@ -8,7 +9,7 @@ export default function Navbar() {
               <IoCarSportOutline size={34} />
               <div>Cruvix Auctions</div>
           </div>
-          <div>Search</div>
+          <Search />
           <div>Login</div>
       </header>
   )
