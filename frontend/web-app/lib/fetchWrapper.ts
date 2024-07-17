@@ -5,7 +5,7 @@ const baseUrl = 'http://localhost:6001/';
 async function get(url: string) {
     const requestOptions = {
         method: 'GET', 
-        headers: await getHeaders(); 
+        headers: await getHeaders()
     }
 
     const response = await fetch(baseUrl + url, requestOptions); 
@@ -64,7 +64,7 @@ async function handleResponse(response: Response) {
             status: response.status,
             message: response.statusText
         }
-        return error; 
+        return { error }; 
     }
 }
 
