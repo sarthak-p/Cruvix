@@ -51,6 +51,7 @@ async function getHeaders() {
     if (token) {
         headers.Authorization = 'Bearer ' + token.access_token;
     }
+    return headers;
 }
 
 async function handleResponse(response: Response) {
