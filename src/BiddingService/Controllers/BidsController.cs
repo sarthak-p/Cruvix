@@ -69,7 +69,7 @@ public class BidsController : ControllerBase
         await _publishEndpoint.Publish(_mapper.Map<BidPlaced>(bid)); 
 
         return Ok(_mapper.Map<BidDto>(bid));
-
+ 
     }
 
     [HttpGet("{auctionId}")]
