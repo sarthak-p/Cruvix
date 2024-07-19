@@ -54,3 +54,5 @@
 /Users/sarthak-p/Desktop/Cruvix/src/BiddingService/obj/Debug/net8.0/ref/BiddingService.dll
 /Users/sarthak-p/Desktop/Cruvix/src/BiddingService/bin/Debug/net8.0/Contracts.dll
 /Users/sarthak-p/Desktop/Cruvix/src/BiddingService/bin/Debug/net8.0/Contracts.pdb
+/Users/sarthak-p/Desktop/Cruvix/src/BiddingService/bin/Debug/net8.0/AutoMapper.dll
+/Users/sarthak-p/Desktop/Cruvix/src/BiddingService/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
