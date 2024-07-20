@@ -8,9 +8,9 @@
 using grpc = global::Grpc.Core;
 
 namespace AuctionService {
-  public static partial class GrpcAuctiobn
+  public static partial class GrpcAuction
   {
-    static readonly string __ServiceName = "GrpcAuctiobn";
+    static readonly string __ServiceName = "GrpcAuction";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -48,15 +48,15 @@ namespace AuctionService {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::AuctionService.GetAuctionRequest> __Marshaller_GetAuctionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AuctionService.GetAuctionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::AuctionService.GrspcAuctionResponse> __Marshaller_GrspcAuctionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AuctionService.GrspcAuctionResponse.Parser));
+    static readonly grpc::Marshaller<global::AuctionService.GrpcAuctionResponse> __Marshaller_GrpcAuctionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AuctionService.GrpcAuctionResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::AuctionService.GetAuctionRequest, global::AuctionService.GrspcAuctionResponse> __Method_GetAuction = new grpc::Method<global::AuctionService.GetAuctionRequest, global::AuctionService.GrspcAuctionResponse>(
+    static readonly grpc::Method<global::AuctionService.GetAuctionRequest, global::AuctionService.GrpcAuctionResponse> __Method_GetAuction = new grpc::Method<global::AuctionService.GetAuctionRequest, global::AuctionService.GrpcAuctionResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAuction",
         __Marshaller_GetAuctionRequest,
-        __Marshaller_GrspcAuctionResponse);
+        __Marshaller_GrpcAuctionResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -64,12 +64,12 @@ namespace AuctionService {
       get { return global::AuctionService.AuctionsReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of GrpcAuctiobn</summary>
-    [grpc::BindServiceMethod(typeof(GrpcAuctiobn), "BindService")]
-    public abstract partial class GrpcAuctiobnBase
+    /// <summary>Base class for server-side implementations of GrpcAuction</summary>
+    [grpc::BindServiceMethod(typeof(GrpcAuction), "BindService")]
+    public abstract partial class GrpcAuctionBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::AuctionService.GrspcAuctionResponse> GetAuction(global::AuctionService.GetAuctionRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::AuctionService.GrpcAuctionResponse> GetAuction(global::AuctionService.GetAuctionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -79,7 +79,7 @@ namespace AuctionService {
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static grpc::ServerServiceDefinition BindService(GrpcAuctiobnBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(GrpcAuctionBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetAuction, serviceImpl.GetAuction).Build();
@@ -90,9 +90,9 @@ namespace AuctionService {
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, GrpcAuctiobnBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, GrpcAuctionBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetAuction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AuctionService.GetAuctionRequest, global::AuctionService.GrspcAuctionResponse>(serviceImpl.GetAuction));
+      serviceBinder.AddMethod(__Method_GetAuction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AuctionService.GetAuctionRequest, global::AuctionService.GrpcAuctionResponse>(serviceImpl.GetAuction));
     }
 
   }

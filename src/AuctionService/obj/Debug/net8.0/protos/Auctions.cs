@@ -25,18 +25,18 @@ namespace AuctionService {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVwcm90b3MvYXVjdGlvbnMucHJvdG8iHwoRR2V0QXVjdGlvblJlcXVlc3QS",
-            "CgoCaWQYASABKAkiWQoRR3JzcGNBdWN0aW9uTW9kZWwSCgoCaWQYASABKAkS",
-            "DgoGc2VsbGVyGAIgASgJEhIKCmF1Y3Rpb25FbmQYAyABKAkSFAoMcmVzZXJ2",
-            "ZVByaWNlGAQgASgFIjsKFEdyc3BjQXVjdGlvblJlc3BvbnNlEiMKB2F1Y3Rp",
-            "b24YASABKAsyEi5HcnNwY0F1Y3Rpb25Nb2RlbDJHCgxHcnBjQXVjdGlvYm4S",
-            "NwoKR2V0QXVjdGlvbhISLkdldEF1Y3Rpb25SZXF1ZXN0GhUuR3JzcGNBdWN0",
-            "aW9uUmVzcG9uc2VCEaoCDkF1Y3Rpb25TZXJ2aWNlYgZwcm90bzM="));
+            "CgoCaWQYASABKAkiWAoQR3JwY0F1Y3Rpb25Nb2RlbBIKCgJpZBgBIAEoCRIO",
+            "CgZzZWxsZXIYAiABKAkSEgoKYXVjdGlvbkVuZBgDIAEoCRIUCgxyZXNlcnZl",
+            "UHJpY2UYBCABKAUiOQoTR3JwY0F1Y3Rpb25SZXNwb25zZRIiCgdhdWN0aW9u",
+            "GAEgASgLMhEuR3JwY0F1Y3Rpb25Nb2RlbDJFCgtHcnBjQXVjdGlvbhI2CgpH",
+            "ZXRBdWN0aW9uEhIuR2V0QXVjdGlvblJlcXVlc3QaFC5HcnBjQXVjdGlvblJl",
+            "c3BvbnNlQhGqAg5BdWN0aW9uU2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::AuctionService.GetAuctionRequest), global::AuctionService.GetAuctionRequest.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AuctionService.GrspcAuctionModel), global::AuctionService.GrspcAuctionModel.Parser, new[]{ "Id", "Seller", "AuctionEnd", "ReservePrice" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AuctionService.GrspcAuctionResponse), global::AuctionService.GrspcAuctionResponse.Parser, new[]{ "Auction" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::AuctionService.GrpcAuctionModel), global::AuctionService.GrpcAuctionModel.Parser, new[]{ "Id", "Seller", "AuctionEnd", "ReservePrice" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AuctionService.GrpcAuctionResponse), global::AuctionService.GrpcAuctionResponse.Parser, new[]{ "Auction" }, null, null, null, null)
           }));
     }
     #endregion
@@ -234,16 +234,16 @@ namespace AuctionService {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GrspcAuctionModel : pb::IMessage<GrspcAuctionModel>
+  public sealed partial class GrpcAuctionModel : pb::IMessage<GrpcAuctionModel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GrspcAuctionModel> _parser = new pb::MessageParser<GrspcAuctionModel>(() => new GrspcAuctionModel());
+    private static readonly pb::MessageParser<GrpcAuctionModel> _parser = new pb::MessageParser<GrpcAuctionModel>(() => new GrpcAuctionModel());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GrspcAuctionModel> Parser { get { return _parser; } }
+    public static pb::MessageParser<GrpcAuctionModel> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -259,7 +259,7 @@ namespace AuctionService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GrspcAuctionModel() {
+    public GrpcAuctionModel() {
       OnConstruction();
     }
 
@@ -267,7 +267,7 @@ namespace AuctionService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GrspcAuctionModel(GrspcAuctionModel other) : this() {
+    public GrpcAuctionModel(GrpcAuctionModel other) : this() {
       id_ = other.id_;
       seller_ = other.seller_;
       auctionEnd_ = other.auctionEnd_;
@@ -277,8 +277,8 @@ namespace AuctionService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GrspcAuctionModel Clone() {
-      return new GrspcAuctionModel(this);
+    public GrpcAuctionModel Clone() {
+      return new GrpcAuctionModel(this);
     }
 
     /// <summary>Field number for the "id" field.</summary>
@@ -332,12 +332,12 @@ namespace AuctionService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as GrspcAuctionModel);
+      return Equals(other as GrpcAuctionModel);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GrspcAuctionModel other) {
+    public bool Equals(GrpcAuctionModel other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -449,7 +449,7 @@ namespace AuctionService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GrspcAuctionModel other) {
+    public void MergeFrom(GrpcAuctionModel other) {
       if (other == null) {
         return;
       }
@@ -535,16 +535,16 @@ namespace AuctionService {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GrspcAuctionResponse : pb::IMessage<GrspcAuctionResponse>
+  public sealed partial class GrpcAuctionResponse : pb::IMessage<GrpcAuctionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GrspcAuctionResponse> _parser = new pb::MessageParser<GrspcAuctionResponse>(() => new GrspcAuctionResponse());
+    private static readonly pb::MessageParser<GrpcAuctionResponse> _parser = new pb::MessageParser<GrpcAuctionResponse>(() => new GrpcAuctionResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GrspcAuctionResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<GrpcAuctionResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -560,7 +560,7 @@ namespace AuctionService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GrspcAuctionResponse() {
+    public GrpcAuctionResponse() {
       OnConstruction();
     }
 
@@ -568,23 +568,23 @@ namespace AuctionService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GrspcAuctionResponse(GrspcAuctionResponse other) : this() {
+    public GrpcAuctionResponse(GrpcAuctionResponse other) : this() {
       auction_ = other.auction_ != null ? other.auction_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GrspcAuctionResponse Clone() {
-      return new GrspcAuctionResponse(this);
+    public GrpcAuctionResponse Clone() {
+      return new GrpcAuctionResponse(this);
     }
 
     /// <summary>Field number for the "auction" field.</summary>
     public const int AuctionFieldNumber = 1;
-    private global::AuctionService.GrspcAuctionModel auction_;
+    private global::AuctionService.GrpcAuctionModel auction_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::AuctionService.GrspcAuctionModel Auction {
+    public global::AuctionService.GrpcAuctionModel Auction {
       get { return auction_; }
       set {
         auction_ = value;
@@ -594,12 +594,12 @@ namespace AuctionService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as GrspcAuctionResponse);
+      return Equals(other as GrpcAuctionResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GrspcAuctionResponse other) {
+    public bool Equals(GrpcAuctionResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -672,13 +672,13 @@ namespace AuctionService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GrspcAuctionResponse other) {
+    public void MergeFrom(GrpcAuctionResponse other) {
       if (other == null) {
         return;
       }
       if (other.auction_ != null) {
         if (auction_ == null) {
-          Auction = new global::AuctionService.GrspcAuctionModel();
+          Auction = new global::AuctionService.GrpcAuctionModel();
         }
         Auction.MergeFrom(other.Auction);
       }
@@ -699,7 +699,7 @@ namespace AuctionService {
             break;
           case 10: {
             if (auction_ == null) {
-              Auction = new global::AuctionService.GrspcAuctionModel();
+              Auction = new global::AuctionService.GrpcAuctionModel();
             }
             input.ReadMessage(Auction);
             break;
@@ -721,7 +721,7 @@ namespace AuctionService {
             break;
           case 10: {
             if (auction_ == null) {
-              Auction = new global::AuctionService.GrspcAuctionModel();
+              Auction = new global::AuctionService.GrpcAuctionModel();
             }
             input.ReadMessage(Auction);
             break;
