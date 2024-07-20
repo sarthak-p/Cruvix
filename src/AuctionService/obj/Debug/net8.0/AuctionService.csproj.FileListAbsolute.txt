@@ -115,3 +115,10 @@
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Google.Protobuf.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Grpc.AspNetCore.Server.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Grpc.AspNetCore.Server.ClientFactory.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Grpc.Core.Api.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Grpc.Net.Client.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Grpc.Net.ClientFactory.dll
+/Users/sarthak-p/Desktop/Cruvix/src/AuctionService/bin/Debug/net8.0/Grpc.Net.Common.dll
