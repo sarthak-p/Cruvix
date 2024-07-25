@@ -29,5 +29,5 @@ export type Bid = {
     bidder: string
     bidTime: string
     amount: number
-    bigStatus: string
+    bidStatus: string
   }
