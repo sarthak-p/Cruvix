@@ -1,4 +1,5 @@
 import { Bid } from "@/types"
+import { create } from "zustand"
 
 type State = {
     bids: Bid[]
@@ -9,7 +10,7 @@ type Actions = {
     addBids: (bid: Bid) => void
 }
 
-export const useBidStore = create<State, Actions>((set) => ({
+export const useBidStore = create<State & Actions>((set) => ({
     bids: [],
 
     setBids: (bids: Bid[]) => {
@@ -20,7 +21,7 @@ export const useBidStore = create<State, Actions>((set) => ({
 
     addBids: (bid: Bid) => {
         set((state) => ({
-            bids: !state.bods.find(x => x.id === bid.id) ? [bid, ...state.bids] : [...state.bids]
+            bids: !state.bids.find(x => x.id === bid.id) ? [bid, ...state.bids] : [...state.bids]
         }))
     }
 }))
