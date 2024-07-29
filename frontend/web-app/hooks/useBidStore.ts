@@ -7,7 +7,7 @@ type State = {
 
 type Actions = {
     setBids: (bids: Bid[]) => void  
-    addBids: (bid: Bid) => void
+    addBid: (bid: Bid) => void
 }
 
 export const useBidStore = create<State & Actions>((set) => ({
@@ -19,7 +19,7 @@ export const useBidStore = create<State & Actions>((set) => ({
         }))
      },
 
-    addBids: (bid: Bid) => {
+    addBid: (bid: Bid) => {
         set((state) => ({
             bids: !state.bids.find(x => x.id === bid.id) ? [bid, ...state.bids] : [...state.bids]
         }))
