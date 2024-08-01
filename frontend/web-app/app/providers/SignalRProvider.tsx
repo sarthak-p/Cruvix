@@ -35,7 +35,7 @@ export default function SignalRProvider({ children }: Props) {
                         if (bid.bidStatus.includes('Accepted')) {
                             setCurrentPrice(bid.auctionId, bid.amount);
                         }
-                        // addBid(bid);
+                        addBid(bid);
                     });
                 }).catch(error => console.error(error));
         }
