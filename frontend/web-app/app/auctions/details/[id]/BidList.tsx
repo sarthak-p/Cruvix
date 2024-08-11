@@ -23,7 +23,11 @@ export default function BidList({ user, auction }: Props) {
     const setBids = useBidStore((state) => state.setBids);
     const highBid = bids.reduce((prev, current) => prev > current.amount
         ? prev
-        : current.amount, 0);
+        : current.bidStatus.includes('Accepted')
+            ? current.amount : prev, 0);
+    const open = useBidStore(state => state.open);
+    const setOpen = useBidStore(state => state.setOpen);
+    const openForBids = new Date(auction.auctionEnd) > new Date();
 
     useEffect(() => {
         getBidsForAuction(auction.id)
@@ -36,6 +40,10 @@ export default function BidList({ user, auction }: Props) {
                 toast.error(err.message);
             }).finally(() => setLoading(false))
     }, [auction.id, setLoading, setBids])
+
+    useEffect(() => {
+        setOpen(openForBids);
+    }, [openForBids, setOpen]);
 
     if (loading) return <span>Loading bids...</span>
 
@@ -61,7 +69,11 @@ export default function BidList({ user, auction }: Props) {
             </div>
 
           <div className='px-2 pb-2 text-gray-500'>
-              {!user ? (
+              {!open ? (
+                  <div className='flex items-center justify-center p-2 text-lg font-semibold'>
+                      This auction has finished
+                  </div>
+              ) : !user ? (
                   <div className='flex items-center justify-center p-2 text-lg font-semibold'>
                       Please login to place a bid
                   </div>
