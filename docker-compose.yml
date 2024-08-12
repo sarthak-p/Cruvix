@@ -121,6 +121,22 @@ services:
     depends_on:
       - rabbitmq
 
+  web-app:
+    image: sarthakp3/web-app
+    build:
+      context: .
+      dockerfile: frontend/web-app/Dockerfile
+    volumes:
+      - /var/lib/web/data
+    ports:
+      - 3000:3000
+    environment:
+      - NEXTAUTH_SECRET=somethingreallyreallysecret
+      - NEXTAUTH_URL=http://web-app
+      - API_URL=http://gateway-svc/
+      - ID_URL=http://identity-svc
+      - NEXT_PUBLIC_NOTIFY_URL=https://gateway-svc/notifications
+
 volumes:
   pgdata:
   mongodata:
