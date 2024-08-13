@@ -1,3 +1,9 @@
+networks:
+  custom:
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+
 services:
   postgres: 
     image: postgres
@@ -7,7 +13,9 @@ services:
       - 5432:5432
     volumes:
       - pgdata:/var/lib/postgresql/data
-
+    networks:
+      custom:
+        
   mongodb:
     image: mongo
     environment:
@@ -17,12 +25,16 @@ services:
       - 27017:27017
     volumes:
       - mongodata:/var/lib/mongodb/data
+    networks:
+      custom:
 
   rabbitmq:
     image: rabbitmq:3-management-alpine
     ports:
       - 5672:5672
       - 15672:15672
+    networks:
+      custom:
 
   auction-svc:
     image: sarthakp3/auction-svc:latest
@@ -46,6 +58,8 @@ services:
     depends_on:
       - postgres
       - rabbitmq
+    networks:
+      custom:
 
   search-svc:
     image: sarthakp3/search-svc:latest
@@ -63,6 +77,8 @@ services:
     depends_on:
       - mongodb
       - rabbitmq
+    networks:
+      custom:
   
   identity-svc:
     image: sarthakp3/identity-svc:latest
@@ -74,9 +90,12 @@ services:
       - ASPNETCORE_URLS=http://+:80
       - ConnectionStrings__DefaultConnection=Server=postgres;Port=5432;User Id=postgres;Password=postgrespw;Database=identity
     ports:
-      - 80:80
+      - 5001:80
     depends_on:
       - postgres
+    networks:
+      custom:
+        ipv4_address: 10.5.0.200
 
   gateway-svc:
     image: sarthakp3/gateway-svc:latest
@@ -106,6 +125,8 @@ services:
     depends_on:
       - mongodb
       - rabbitmq
+    networks:
+      custom:
       
   notify-svc:
     image: sarthakp3/notify-svc:latest
@@ -120,6 +141,8 @@ services:
       - 7004:80
     depends_on:
       - rabbitmq
+    networks:
+      custom:
 
   web-app:
     image: sarthakp3/web-app
@@ -131,7 +154,7 @@ services:
     ports:
       - 3000:3000
     extra_hosts:
-      - id.cruvix.com:172.20.0.9
+      - id.cruvix.com:10.5.0.200
     environment:
       - NEXTAUTH_SECRET=somethingreallyreallysecret
       - NEXTAUTH_URL=http://localhost:3000
@@ -139,6 +162,8 @@ services:
       - API_URL=http://gateway-svc/
       - ID_URL=http://id.cruvix.com
       - NEXT_PUBLIC_NOTIFY_URL=https://gateway-svc/notifications
+    networks:
+      custom:
 
 volumes:
   pgdata:
