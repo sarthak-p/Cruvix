@@ -6,8 +6,9 @@ import { Auction, AuctionFinished, Bid } from '@/types';
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr'
 import { User } from 'next-auth';
 import React, { ReactNode, useEffect, useState } from 'react'
-import toast from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 import AuctionCreatedToast from '../components/AuctionCreatedToast';
+import { getDetailedViewData } from '../actions/auctionActions';
 import AuctionFinishedToast from '../components/AuctionFinishedToast';
 
 type Props = {
@@ -16,20 +17,22 @@ type Props = {
 }
 
 export default function SignalRProvider({ children, user }: Props) {
-    
-     const [connection, setConnection] = useState<HubConnection | null>(null);
+    const [connection, setConnection] = useState<HubConnection | null>(null);
     const setCurrentPrice = useAuctionStore(state => state.setCurrentPrice);
     const addBid = useBidStore(state => state.addBid);
+    const apiUrl = process.env.NODE_ENV === 'production' 
+        ? 'https://api.carsties.store/notifications'
+        : process.env.NEXT_PUBLIC_NOTIFY_URL
 
-     useEffect(() => {
+    useEffect(() => {
         const newConnection = new HubConnectionBuilder()
-            .withUrl(process.env.NEXT_PUBLIC_NOTIFY_URL!)
+            .withUrl(apiUrl!)
             .withAutomaticReconnect()
             .build();
 
         setConnection(newConnection);
-     }, []);
-    
+    }, [apiUrl]);
+
     useEffect(() => {
         if (connection) {
             connection.start()
@@ -45,41 +48,34 @@ export default function SignalRProvider({ children, user }: Props) {
 
                     connection.on('AuctionCreated', (auction: Auction) => {
                         if (user?.username !== auction.seller) {
-                            return toast(<AuctionCreatedToast auction={auction} />,
-                                { duration: 10000 })
+                            return toast(<AuctionCreatedToast auction={auction} />, 
+                                {duration: 10000})
                         }
-
                     });
 
                     connection.on('AuctionFinished', (finishedAuction: AuctionFinished) => {
                         const auction = getDetailedViewData(finishedAuction.auctionId);
                         return toast.promise(auction, {
-                            loading: 'Loading', 
-                            success: (auction) =>
-                                <AuctionFinishedToast
-                                    finishedAuction={finishedAuction}
+                            loading: 'Loading',
+                            success: (auction) => 
+                                <AuctionFinishedToast 
+                                    finishedAuction={finishedAuction} 
                                     auction={auction}
-                                
                                 />,
                             error: (err) => 'Auction finished!'
                         }, {success: {duration: 10000, icon: null}})
                     })
 
 
-                }).catch(error => console.error(error));
+                }).catch(error => console.log(error));
         }
+
         return () => {
             connection?.stop();
         }
-
     }, [connection, setCurrentPrice, addBid, user?.username])
 
-
-
-
-    
-
-  return (
-    children
-  )
+    return (
+        children
+    )
 }
